@@ -19,7 +19,7 @@ final var voidResponse = BoxImmutable.<Long, Integer>withVoidPayload(404);
 ### Consumer
 
 ```Java
-// unbox and get the created ID (value) from it
+// unbox and get the ID of created entity (value) from it
 if(valueResponse.unbox() instanceof final ValueHolder<Long, Integer> resourceCreatedHolder) {
     System.out.println("remote created resource with id: " + resourceCreatedHolder.getValue());
 }
@@ -30,7 +30,7 @@ if(voidResponse.unbox() instanceof final VoidHolder<Long, Integer> voidHolder) {
 }
 ```
 
-Check test cases for more examples.
+Check [test cases](https://github.com/anthonychwong/ValueBox/tree/main/src/test/java) for more examples.
 
 ## How does it different from Optional in Java?
 
@@ -42,6 +42,15 @@ Check test cases for more examples.
 
 ## TODO
 
-- [ ] confirm compatibility with Java 8
-- [ ] thread safety
-- [ ] more lambda friendly
+- [ ] lambda-ish methods, e.g. `ifPresent`, `ifVoid`, `orElseGet`, `orElseThrow`, etc.
+- [ ] thread safety (compare and swap and locks)
+- [ ] confirm compatibility with Java 8 and Kotlin
+
+## Contributors
+
+* Anthony
+    * Git: [anthonnychwong](https://github.com/anthonychwong)
+    * Blog: [anthonychwong.netlify.app](https://anthonychwong.netlify.app/)
+    * Support: [buy me a book](https://www.buymeacoffee.com/anthonychwong)
+
+## Sponsors
