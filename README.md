@@ -1,5 +1,7 @@
 # ValueBox
 
+![publishing status](https://github.com/anthonychwong/ValueBox/actions/workflows/gradle-publish.yml/badge.svg)
+
 ## What is it?
 
 Value box can hold either a value, or otherwise additional information, named void payload. To access the content inside, you first need to determine if it holds a value or not, than "unbox" it to access the content inside, either value, or void payload.
@@ -39,6 +41,15 @@ Check [test cases](https://github.com/anthonychwong/ValueBox/tree/main/src/test/
 * Optional only represents `null` or empty, but value boxes allow additional information, e.g. error code or exceptions, to be delivered with the empty result.
 
 * Optional may throw `NoSuchElementException` when try to get the value, while value boxes force you the check if it holds value before you can perform get operation.
+
+## How to use it in my project?
+
+Since it is published to Maven repo of GitHub packages, add dependency in your gradle build script or pom.xml for Maven by following the [official GitHub doc (link)](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry#using-a-published-package) with below informations.
+
+- repo url: https://maven.pkg.github.com/anthonychwong/ValueBox
+- group id: `dev.anthonychwong`
+- artifact id: `value-box`
+- version: check [package page](https://github.com/anthonychwong/ValueBox/packages/1636268) for available versions
 
 ## TODO
 
